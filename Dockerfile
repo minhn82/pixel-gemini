@@ -1,12 +1,12 @@
 FROM python:3.11-slim
 
-# Cài đặt các package cần thiết cho Chrome, Selenium, và Telegram bot
-RUN apt-get update && apt-get install -y \
+# Update package list trước
+RUN apt-get update
+
+# Cài đặt Chrome và dependencies
+RUN apt-get install -y \
     chromium-browser \
     chromium-driver \
-    libxss1 \
-    libappindicator1 \
-    libindicator7 \
     fonts-liberation \
     xdg-utils \
     wget \
