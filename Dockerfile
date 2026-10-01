@@ -5,7 +5,7 @@ RUN apt-get update
 
 # Cài đặt Chrome và dependencies
 RUN apt-get install -y \
-    chromium-browser \
+    chromium \
     chromium-driver \
     fonts-liberation \
     xdg-utils \
